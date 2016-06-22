@@ -1,0 +1,45 @@
+<resources>
+
+    <style name="TextAppearance.Medium" parent="@android:style/TextAppearance.Material.Medium"/>
+
+    <style name="TextAppearance.Small" parent="@android:style/TextAppearance.Material.Small"/>
+
+    <style name="TextAppearance.Switch" parent="TextAppearance.Medium"/>
+
+    <style name="TextAppearance.CategoryTitle" parent="@android:style/TextAppearance.Material.Small">
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.TileTitle" parent="@android:style/TextAppearance.Material.Medium"/>
+
+    <style name="TextAppearance.TileSubTitle" parent="@android:style/TextAppearance.Material.Small"/>
+
+    <style name="Material_Dialog" parent="@android:style/Theme.Material.Light.Dialog">
+        <item name="android:colorPrimary">?attr/colorPrimary</item>
+        <item name="android:colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="android:colorButtonNormal">?attr/colorPrimary</item>
+        <item name="android:colorAccent">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="Material_Dialog.EditText">
+        <item name="android:colorAccent">?attr/colorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Small.SwitchBar">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- Used to color the switch bar controls -->
+    <style name="ThemeOverlay.SwitchBar" parent="ThemeOverlay.AppCompat">
+        <!-- Used by controls, e.g. CheckBox, ProgressBar, etc. -->
+        <item name="colorAccent">?attr/colorAccent</item>
+    </style>
+
+    <style name="ButtonBar" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Used by controls, e.g. CheckBox, ProgressBar, etc. -->
+        <item name="android:colorButtonNormal">?attr/colorAccent</item>
+    </style>
+
+</resources>
