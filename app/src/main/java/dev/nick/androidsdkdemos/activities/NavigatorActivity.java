@@ -14,6 +14,6 @@ public class NavigatorActivity extends TransactionSafeActivity {
         setContentView(R.layout.navigator_content);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        placeFragment(R.id.container, new Dashboards(), null, true);
+        placeFragment(R.id.container, new Dashboards(), null, false);
     }
 }

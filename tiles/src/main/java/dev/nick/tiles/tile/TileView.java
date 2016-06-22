@@ -77,8 +77,8 @@ public class TileView extends FrameLayout implements View.OnClickListener {
     @Override
     public void setEnabled(boolean enabled) {
         super.setEnabled(enabled);
-        mTitleTextView.setTextColor(getResources().getColor(R.color.textColorSecond));
-        mStatusTextView.setTextColor(getResources().getColor(R.color.textColorSecond));
+        mTitleTextView.setTextColor(getResources().getColor(R.color.text_color_second));
+        mStatusTextView.setTextColor(getResources().getColor(R.color.text_color_second));
     }
 
     protected void onBindActionView(RelativeLayout container) {

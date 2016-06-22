@@ -4,10 +4,12 @@ import android.support.annotation.NonNull;
 
 import java.util.List;
 
+import dev.nick.androidsdkdemos.activities.ActionTile;
 import dev.nick.androidsdkdemos.activities.DataTimeTile;
 import dev.nick.androidsdkdemos.activities.DropdownTile;
 import dev.nick.androidsdkdemos.activities.EditTextTile;
 import dev.nick.androidsdkdemos.activities.HeadlessTile;
+import dev.nick.androidsdkdemos.activities.HeadlessTile2;
 import dev.nick.androidsdkdemos.activities.SwitchTile;
 import dev.nick.tiles.tile.Category;
 import dev.nick.tiles.tile.DashboardFragment;
@@ -20,9 +22,10 @@ public class Dashboards extends DashboardFragment implements TileListener {
     protected void onCreateDashCategories(List<Category> categories) {
         super.onCreateDashCategories(categories);
         Category category = new Category();
+        category.title = "category";
         category.addTile(new HeadlessTile(getActivity(), this));
-        category.addTile(new HeadlessTile(getActivity(), this));
-        category.addTile(new HeadlessTile(getActivity(), this));
+        category.addTile(new HeadlessTile2(getActivity(), this));
+        category.addTile(new ActionTile(getActivity(), this));
         Category category1 = new Category();
         category1.addTile(new SwitchTile(getActivity(), this));
         category1.addTile(new SwitchTile(getActivity(), this));

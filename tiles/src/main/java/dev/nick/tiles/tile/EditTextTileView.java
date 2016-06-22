@@ -2,6 +2,8 @@ package dev.nick.tiles.tile;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.text.Editable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,12 +28,47 @@ public class EditTextTileView extends TileView {
     protected void onCreate(Context context) {
         super.onCreate(context);
         View editTextContainer = LayoutInflater.from(context).inflate(R.layout.dialog_edit_text, null, false);
+        mEditText = (EditText) editTextContainer.findViewById(R.id.edit_text);
         mAlertDialog = new AlertDialog.Builder(context, R.style.Material_Dialog)
                 .setView(editTextContainer)
-                .setTitle("Edit tile")
-                .setPositiveButton("SAVE", null)
-                .setNegativeButton("DISCARD", null)
+                .setTitle(getDialogTitle())
+                .setPositiveButton(getPositiveButton(), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        onPositiveButtonClick();
+                    }
+                })
+                .setNegativeButton(getNegativeButton(), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        onNegativeButtonClick();
+                    }
+                })
                 .create();
+    }
+
+    protected EditText getEditText() {
+        return mEditText;
+    }
+
+    protected CharSequence getDialogTitle() {
+        return "Edit tile";
+    }
+
+    protected CharSequence getPositiveButton() {
+        return "SAVE";
+    }
+
+    protected CharSequence getNegativeButton() {
+        return "DISCARD";
+    }
+
+    protected void onPositiveButtonClick() {
+        // Nothing.
+    }
+
+    protected void onNegativeButtonClick() {
+        // Nothing.
     }
 
     @Override

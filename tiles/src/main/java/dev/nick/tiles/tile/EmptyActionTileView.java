@@ -1,10 +1,10 @@
 package dev.nick.tiles.tile;
 
 import android.content.Context;
+import android.os.Build;
+import android.support.annotation.ColorInt;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
-
-import dev.nick.tiles.R;
 
 public class EmptyActionTileView extends TileView {
     public EmptyActionTileView(Context context) {
@@ -18,6 +18,13 @@ public class EmptyActionTileView extends TileView {
     @Override
     protected void onBindActionView(RelativeLayout container) {
         super.onBindActionView(container);
-        getTitleTextView().setTextColor(getResources().getColor(R.color.action_text_color));
+        getTitleTextView().setTextColor(getActionTextColor());
+    }
+
+    protected @ColorInt int getActionTextColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return getResources().getColor(android.R.color.holo_blue_light, getContext().getTheme());
+        }
+        return getResources().getColor(android.R.color.holo_blue_light);
     }
 }

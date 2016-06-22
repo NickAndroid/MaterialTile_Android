@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <color name="textColorSecond">#66696969</color>
+    <color name="text_color_second">#66696969</color>
     <color name="black_overlay">#66000000</color>
     <color name="tile_icon_tint">#757575</color>
-
-    <color name="action_text_color">?attr/colorAccent</color>
 </resources>
