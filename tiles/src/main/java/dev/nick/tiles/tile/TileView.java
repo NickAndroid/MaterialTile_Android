@@ -70,15 +70,9 @@ public class TileView extends FrameLayout implements View.OnClickListener {
         onBindActionView((RelativeLayout) view.findViewById(R.id.action_area));
 
         setOnClickListener(this);
+
         setBackgroundResource(R.drawable.dashboard_tile_background);
         setFocusable(true);
-    }
-
-    @Override
-    public void setEnabled(boolean enabled) {
-        super.setEnabled(enabled);
-        mTitleTextView.setTextColor(getResources().getColor(R.color.text_color_second));
-        mStatusTextView.setTextColor(getResources().getColor(R.color.text_color_second));
     }
 
     protected void onBindActionView(RelativeLayout container) {
@@ -88,7 +82,7 @@ public class TileView extends FrameLayout implements View.OnClickListener {
         return mTitleTextView;
     }
 
-    public TextView getStatusTextView() {
+    public TextView getSummaryTextView() {
         return mStatusTextView;
     }
 

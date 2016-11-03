@@ -24,7 +24,7 @@ public class DateTileView extends TileView {
         mDatePickerDialog = new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                getStatusTextView().setText(String.valueOf(year + "-" + monthOfYear + "-" + dayOfMonth));
+                getSummaryTextView().setText(String.valueOf(year + "-" + monthOfYear + "-" + dayOfMonth));
             }
         }, 1991, 9, 12);
     }

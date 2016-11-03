@@ -1,9 +1,8 @@
 package dev.nick.tiles.tile;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.text.Editable;
+import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +28,7 @@ public class EditTextTileView extends TileView {
         super.onCreate(context);
         View editTextContainer = LayoutInflater.from(context).inflate(R.layout.dialog_edit_text, null, false);
         mEditText = (EditText) editTextContainer.findViewById(R.id.edit_text);
-        mAlertDialog = new AlertDialog.Builder(context, R.style.Material_Dialog)
+        mAlertDialog = new AlertDialog.Builder(context)
                 .setView(editTextContainer)
                 .setTitle(getDialogTitle())
                 .setPositiveButton(getPositiveButton(), new DialogInterface.OnClickListener() {

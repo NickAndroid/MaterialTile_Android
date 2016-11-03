@@ -94,7 +94,7 @@ public class DashboardFragment extends Fragment {
                 Tile tile = category.getTile(i);
                 TileView tileView = tile.tileView;
                 updateTileView(context, res, tile, tileView.getImageView(),
-                        tileView.getTitleTextView(), tileView.getStatusTextView());
+                        tileView.getTitleTextView(), tileView.getSummaryTextView());
 
                 tileView.setTile(tile);
                 categoryContent.addView(tileView);

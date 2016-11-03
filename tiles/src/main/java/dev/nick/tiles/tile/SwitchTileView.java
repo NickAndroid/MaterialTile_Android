@@ -3,18 +3,18 @@ package dev.nick.tiles.tile;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.v7.widget.SwitchCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Checkable;
 import android.widget.RelativeLayout;
-import android.widget.Switch;
 
 /**
  * Created by nick on 11/12/15.
  */
 public class SwitchTileView extends TileView implements Checkable {
 
-    private Switch mSwitch;
+    private SwitchCompat mSwitch;
 
     public SwitchTileView(Context context) {
         super(context);
@@ -26,7 +26,7 @@ public class SwitchTileView extends TileView implements Checkable {
 
     @Override
     protected void onBindActionView(RelativeLayout container) {
-        final Switch s = new Switch(getContext());
+        final SwitchCompat s = new SwitchCompat(getContext());
         container.addView(s, generateCenterParams());
         s.setOnClickListener(new View.OnClickListener() {
             @Override

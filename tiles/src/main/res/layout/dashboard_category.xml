@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,17 +13,18 @@
      limitations under the License.
 -->
 
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/category"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dip"
     android:background="@android:color/white"
     android:elevation="@dimen/dashboard_category_elevation"
     android:orientation="vertical"
-    android:paddingStart="@dimen/dashboard_category_padding_start"
-    android:paddingEnd="@dimen/dashboard_category_padding_end">
+    android:paddingEnd="@dimen/dashboard_category_padding_end"
+    android:paddingLeft="@dimen/dashboard_category_padding_start"
+    android:paddingRight="@dimen/dashboard_category_padding_end"
+    android:paddingStart="@dimen/dashboard_category_padding_start">
 
     <TextView
         android:id="@+id/category_title"
@@ -32,15 +32,17 @@
         android:layout_height="@dimen/dashboard_category_title_height"
         android:ellipsize="marquee"
         android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dashboard_category_title_margin_start"
         android:paddingStart="@dimen/dashboard_category_title_margin_start"
         android:singleLine="true"
         android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.CategoryTitle"/>
+        android:textAppearance="@style/TextAppearance.CategoryTitle" />
 
     <dev.nick.tiles.tile.ContainerView
         android:id="@+id/category_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/category_summary"
@@ -51,6 +53,6 @@
         android:paddingLeft="@dimen/dashboard_category_title_margin_start"
         android:paddingRight="@dimen/dashboard_category_title_margin_start"
         android:paddingTop="@dimen/dashboard_category_title_margin_start"
-        android:textAppearance="@style/TextAppearance.Small"/>
+        android:textAppearance="@style/TextAppearance.Small" />
 
 </LinearLayout>

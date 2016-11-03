@@ -14,7 +14,9 @@
         android:layout_marginEnd="@dimen/dashboard_tile_image_margin_end"
         android:layout_marginStart="@dimen/dashboard_tile_image_margin_start"
         android:scaleType="fitXY"
-        android:tint="@color/tile_icon_tint"/>
+        android:tint="@color/tile_icon_tint"
+        android:layout_marginRight="@dimen/dashboard_tile_image_margin_end"
+        android:layout_marginLeft="@dimen/dashboard_tile_image_margin_start" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,7 +24,9 @@
         android:layout_centerVertical="true"
         android:layout_marginBottom="@dimen/dashboard_category_bot_margin"
         android:layout_toEndOf="@+id/icon"
-        android:layout_toStartOf="@+id/action_area">
+        android:layout_toStartOf="@+id/action_area"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_toLeftOf="@+id/action_area">
 
         <TextView
             android:id="@+id/title"
@@ -30,6 +34,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
+            android:maxLines="1"
             android:singleLine="true"
             android:text="@string/app_name"
             android:textAppearance="@style/TextAppearance.TileTitle"/>
@@ -41,9 +46,11 @@
             android:layout_alignStart="@android:id/title"
             android:layout_below="@id/title"
             android:ellipsize="end"
+            android:maxLines="1"
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.Small"
-            android:textColor="?android:attr/textColorSecondary"/>
+            android:textColor="?android:attr/textColorSecondary"
+            android:layout_alignLeft="@android:id/title" />
 
     </RelativeLayout>
 
@@ -53,7 +60,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:minWidth="@dimen/dashboard_tile_minimum_height"/>
+        android:minWidth="@dimen/dashboard_tile_minimum_height"
+        android:layout_alignParentRight="true" />
 
     <View
         android:id="@+id/tile_divider"
@@ -61,7 +69,8 @@
         android:layout_height="1dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/icon"
-        android:background="?android:attr/dividerVertical"/>
+        android:background="?android:attr/dividerVertical"
+        android:layout_toRightOf="@+id/icon" />
 
 
 </RelativeLayout>
