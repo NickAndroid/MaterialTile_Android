@@ -1,5 +1,5 @@
 # MaterialTile
-Materialized tile view library
+Materialized tile view library minSdk 15
 
 ![Logo](art/1.png)
 ![Logo](art/2.png)
